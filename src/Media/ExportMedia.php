@@ -42,6 +42,9 @@ class ExportMedia
      */
     protected $streams;
 
+	/** @var string|null */
+	protected $tempDir = null;
+
     /**
      * MediaFileAnalysis constructor.
      * @param Process $process
@@ -95,6 +98,10 @@ class ExportMedia
 
         if (null !== $this->drm) {
             $this->process->addCommand($this->drm->export());
+        }
+
+        if (null !== $this->tempDir) {
+            $this->process->addCommand(MediaOptions::TEMP_DIR . '=' . $this->tempDir);
         }
 
         if (null !== $this->hls) {

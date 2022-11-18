@@ -28,6 +28,8 @@ class MediaOptions
 
     const DEFAULT_TEXT_LANGUAGE = '--default_text_language';
 
+    const TEMP_DIR = '--temp_dir';
+
 
     //DASH Options
     const GENERATE_STATIC_LIVE_MPD = '--generate_static_live_mpd';

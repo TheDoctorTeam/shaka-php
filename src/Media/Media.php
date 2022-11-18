@@ -72,6 +72,16 @@ class Media extends ExportMedia implements MediaInterface
     }
 
     /**
+     * @return $this
+     */
+    public function tempDir(string $path)
+    {
+        $this->tempDir = $path;
+
+        return $this;
+    }
+
+    /**
      * @param $media
      * @param $instance
      * @throws MediaException
